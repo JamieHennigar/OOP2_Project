@@ -1,0 +1,30 @@
+
+import java.awt.event.*;
+import javax.swing.JFrame;
+
+public class TheWall extends JFrame implements ActionListener {
+
+	public static void main(String[] args) {
+		//Mexican m = new Mexican();
+		//Donald d = new Donald();
+		TheWall frame = new TheWall();	
+		frame.setVisible(true);
+
+	}
+
+	
+	public TheWall()
+	{
+		setTitle("The Wall");
+		setSize(600,500);
+		setLocation(350,100);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		
+		
+	}
+
+}
