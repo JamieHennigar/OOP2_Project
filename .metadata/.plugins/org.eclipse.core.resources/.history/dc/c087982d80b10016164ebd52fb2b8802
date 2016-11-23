@@ -1,0 +1,35 @@
+import javax.swing.*;
+
+
+
+
+
+public class Character 
+{
+	private String name;
+	private String mexicanImage;
+	private String donaldImage;
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	public String donaldImage()
+	{
+		//JLabel Donald = new JLabel(new ImageIcon("Donald Trump.jpg"));
+		
+		return donaldImage;
+	}
+	
+	public String mexicanImage()
+	{
+		return mexicanImage;
+	}
+}
+
+

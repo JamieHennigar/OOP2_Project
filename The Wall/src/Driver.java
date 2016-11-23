@@ -1,11 +1,10 @@
 
 public class Driver {
-public static void main(String[] args) {
+
+	public static void main(String[] args) {
 		
 		
-		//Mexican m = new Mexican();
-		//Donald d = new Donald();
-		TheWall frame = new TheWall();	
+		GameGui frame = new GameGui();	
 		frame.setVisible(true);
 
 	}

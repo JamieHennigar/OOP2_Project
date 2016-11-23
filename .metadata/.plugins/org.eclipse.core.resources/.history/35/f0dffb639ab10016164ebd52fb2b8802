@@ -1,0 +1,19 @@
+
+public class Donald extends Character
+{
+	private int score;
+	
+	public void setScore(int score)
+	{
+		
+	}
+	
+	public int getScore()
+	{
+		return score;
+	}
+	public void move()
+	{
+		
+	}
+}

@@ -1,0 +1,5 @@
+
+public class Donald 
+{
+	private int score;
+}

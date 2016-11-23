@@ -1,0 +1,8 @@
+
+public class Mexican 
+{
+	private int health;
+	private int points;
+	
+	
+}
