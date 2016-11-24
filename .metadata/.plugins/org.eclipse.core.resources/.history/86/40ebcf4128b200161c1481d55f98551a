@@ -1,7 +1,4 @@
 import java.awt.*;
-import java.awt.image.ImageObserver;
-
-import javax.swing.*;
 
 
 public class GameComponent 
@@ -47,26 +44,8 @@ public class GameComponent
 		return image;
 	}
 	
-	public void draw(Graphics gRef)
+	public void draw()
 	{
-		Image donaldImage;
-		Image mexicanImage;
-		Image flagImage;
 		
-		//donaldImage.getHeight();
-		//donaldImage.getWidth();
-		/*donaldImage = new Image();
-		gRef.drawImage(donaldImage, topLeftXPosition , topLeftYPosition , image.getWidth(), image.getHeight(), 
-					   0, 0, donaldImage.getWidth(), donaldImage.getHeight(), null);
-		
-		
-		
-		mexicanImage.getHeight();
-		mexicanImage.getWidth();
-		
-		
-		
-		flagImage.getHeaight();
-		flagImage.getWidth();*/
 	}
 }

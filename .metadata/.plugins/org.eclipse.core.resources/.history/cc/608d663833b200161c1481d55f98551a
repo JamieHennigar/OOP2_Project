@@ -28,12 +28,11 @@ public class GameGui extends JFrame implements ActionListener {
 		JLabel donald = new JLabel();
 		ImageIcon donaldImage = new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg");
 		donald.setIcon(donaldImage);
-		donald.setSize(50, 50);
 		cPane.add(donald);
 		//set the size and location for donald
 		
 		//create mexican image and set size and location
-		JLabel mexican = new JLabel();
+		JLabel mexican = new JLabel("mexican");
 		ImageIcon mexicanImage = new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Mexican.jpg");
 		mexican.setIcon(mexicanImage);
 		cPane.add(mexican);
