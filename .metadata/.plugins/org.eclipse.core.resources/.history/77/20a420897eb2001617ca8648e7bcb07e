@@ -17,8 +17,8 @@ public class GameGui extends JFrame implements ActionListener {
 	public GameGui()
 	{
 		setTitle("The Wall");
-		setSize(1200,1000);
-		setLocation(150,0);
+		setSize(600,500);
+		setLocation(350,100);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		createFileMenu();
@@ -26,14 +26,15 @@ public class GameGui extends JFrame implements ActionListener {
 		Container cPane = getContentPane();
 		cPane.setLayout(new FlowLayout());
 		JLabel donald = new JLabel();
-		ImageIcon donaldImage = new ImageIcon(new ImageIcon(("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg")).getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+		ImageIcon donaldImage = new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg");
 		donald.setIcon(donaldImage);
+		donald.setSize(50, 50);
 		cPane.add(donald);
 		//set the size and location for donald
 		
 		//create mexican image and set size and location
 		JLabel mexican = new JLabel();
-		ImageIcon mexicanImage = new ImageIcon(new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Mexican.jpg").getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+		ImageIcon mexicanImage = new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Mexican.jpg");
 		mexican.setIcon(mexicanImage);
 		cPane.add(mexican);
 		

@@ -17,8 +17,8 @@ public class GameGui extends JFrame implements ActionListener {
 	public GameGui()
 	{
 		setTitle("The Wall");
-		setSize(1200,1000);
-		setLocation(150,0);
+		setSize(600,500);
+		setLocation(350,100);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		createFileMenu();
@@ -27,6 +27,7 @@ public class GameGui extends JFrame implements ActionListener {
 		cPane.setLayout(new FlowLayout());
 		JLabel donald = new JLabel();
 		ImageIcon donaldImage = new ImageIcon(new ImageIcon(("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg")).getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+		donald.setBounds(200, 200, 70, 70);
 		donald.setIcon(donaldImage);
 		cPane.add(donald);
 		//set the size and location for donald
