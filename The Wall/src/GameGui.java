@@ -12,12 +12,14 @@ public class GameGui extends JFrame implements KeyListener,Runnable,ActionListen
 	Thread gameThread;
 	Image gameImage;
 	Graphics gRef;
+	//int direction=1;
 	
 	Donald theDonald;
 	Mexican[][] theMexicans;
 	Wall theWall;
 	ArrayList<Flag> theFlags = new ArrayList<Flag>();
 	Flag theFlag;
+	
 	//main method
 	public static void main(String[]args)
 	{
@@ -43,44 +45,7 @@ public class GameGui extends JFrame implements KeyListener,Runnable,ActionListen
 	}
 
 	
-	public void run()
-	{
-		Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
-		Graphics g = getGraphics();
-		
-		while(gameOn)
-		{
-			try
-			{
-				paint(g);
-				Thread.sleep(20);
-			}
-			catch(InterruptedException e)
-			{
-				break;
-			}
-		}
-	}
-
-	private void start()
-	{
-		if(gameThread == null)
-		{
-			gameThread = new Thread(this);
-			gameThread.start();
-		}
-		
-		
-	}
-
-
-	private void initialiseGame() {
-		
-		
-		
-		gameOn = true;
-		
-	}
+	
 
 
 	private void createFileMenu() {
@@ -108,6 +73,43 @@ public class GameGui extends JFrame implements KeyListener,Runnable,ActionListen
 		
 		
 
+	}
+	
+		private void initialiseGame() 
+		{
+			//this is where you'll create the Donald object and 
+			//the Mexican objects + wall to begin with
+			gameOn = true;
+		}
+	
+	public void run()
+	{
+		Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+		Graphics g = getGraphics();
+		
+		while(gameOn)
+		{
+			try
+			{//use draw methods in here
+				paint(g);
+				Thread.sleep(20);
+			}
+			catch(InterruptedException e)
+			{
+				break;
+			}
+		}
+	}
+
+	private void start()
+	{
+		if(gameThread == null)
+		{
+			gameThread = new Thread(this);
+			gameThread.start();
+		}
+		
+		
 	}
 	
 	/*private void displayDonald()
@@ -166,6 +168,28 @@ public class GameGui extends JFrame implements KeyListener,Runnable,ActionListen
 		
 
 
+		
+	}
+
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		
+		theDonald.move(2);
+	}
+
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		
+		theDonald.move(2);
+	}
+
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		
+		
 		
 	}
 	

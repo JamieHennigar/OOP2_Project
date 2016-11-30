@@ -1,0 +1,58 @@
+import javax.swing.*;
+
+import java.awt.*;
+
+
+
+
+public class Character extends GameComponent
+{
+	public Character(int topLeftXPosition, int topLeftYPosition, Image image,int width,int height) 
+	{
+		super(topLeftXPosition, topLeftYPosition, image, width, height);
+	}
+
+
+	//private String name;
+	//private Image image;
+	private int health;
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void setHealth(int health)
+	{
+		this.health = health;
+	}
+	
+	
+	public void setImage(Image image)
+	{
+		this.image = image;
+	}
+	
+	
+	public int getHealth()
+	{
+		return health;
+	}
+	
+	
+	public Image getImage()
+	{
+		return image;
+	}
+	
+	
+	
+	
+}
+
+

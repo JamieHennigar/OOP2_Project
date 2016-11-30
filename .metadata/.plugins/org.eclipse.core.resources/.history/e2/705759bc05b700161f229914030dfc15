@@ -1,0 +1,15 @@
+
+public class Flag extends Character
+{
+	
+
+	public boolean collidesWith(Mexican m)
+	{
+		
+		
+	}
+	public void move()
+	{
+		
+	}
+}

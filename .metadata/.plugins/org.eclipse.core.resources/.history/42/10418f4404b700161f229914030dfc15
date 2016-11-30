@@ -1,0 +1,15 @@
+import java.awt.*;
+
+
+public class Wall extends Character
+{
+	
+	
+	
+
+	public void draw(Graphics gRef)
+	{
+		gRef.setColor(Color.blue);
+		gRef.fillRect(topLeftXPosition, topLeftXPosition, width, height);
+	}
+}

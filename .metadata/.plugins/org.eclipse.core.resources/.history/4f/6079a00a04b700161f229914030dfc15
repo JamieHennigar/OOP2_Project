@@ -1,0 +1,18 @@
+import java.awt.*;
+
+
+public class Wall extends GameComponent
+{
+	
+	
+	public Wall(int topLeftXPosition, int topLeftYPosition, Image image) 
+	{
+		super(topLeftXPosition, topLeftYPosition, image);
+	}
+
+	public void draw(Graphics gRef)
+	{
+		gRef.setColor(Color.blue);
+		gRef.fillRect(getTopLeftXPosition(), getTopLeftYPosition(), getWidth(), getHeight());
+	}
+}

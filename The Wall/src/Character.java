@@ -1,35 +1,29 @@
 import javax.swing.*;
+
 import java.awt.*;
 
 
 
 
-public class Character 
+public class Character extends GameComponent
 {
-	private String name;
-	private Image image;
+	public Character(int topLeftXPosition, int topLeftYPosition, int width,int height, Image image) 
+	{
+		super(topLeftXPosition, topLeftYPosition, height, width, image);
+	}
+
+
+	//private String name;
+	//private Image image;
 	private int health;
 	
-	public void setName(String name)
-	{
-		this.name = name;
-	}
 	
-	public String getName()
-	{
-		return name;
-	}
 	
 	public void setHealth(int health)
 	{
 		this.health = health;
 	}
 	
-	
-	public void setImage(Image image)
-	{
-		this.image = image;
-	}
 	
 	
 	public int getHealth()
@@ -38,10 +32,6 @@ public class Character
 	}
 	
 	
-	public Image getImage()
-	{
-		return image;
-	}
 	
 	
 	

@@ -1,20 +1,19 @@
+import java.awt.*;
 
-public class Mexican 
+
+
+public class Mexican extends Character
 {
 	//declare attributes
 	private int health;
 	private int points;
 	
-	//no argument constructor
-	public Mexican()
-	{
-		health = 0;
-		points = 0;
-	}
+	
 	
 	//multiple argument constructor
-	public Mexican(int health, int points)
+	public Mexican(int topLeftXPosition, int topLeftYPosition, Image image, int width, int height)
 	{
+		super(topLeftXPosition, topLeftYPosition, height, width, image);
 		this.health = health;
 		this.points = points;
 	}
@@ -41,6 +40,11 @@ public class Mexican
 	}
 	
 	public void move()
+	{
+		
+	}
+	
+	public void draw(Graphics gRef)
 	{
 		
 	}
