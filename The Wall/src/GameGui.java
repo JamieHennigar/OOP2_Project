@@ -1,12 +1,23 @@
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
 
-public class GameGui extends JFrame implements ActionListener {
+public class GameGui extends JFrame implements KeyListener,Runnable,ActionListener {
 
+	boolean gameOn = false;
+	Thread gameThread;
+	Image gameImage;
+	Graphics gRef;
+	
+	Donald theDonald;
+	Mexican[][] theMexicans;
+	Wall theWall;
+	ArrayList<Flag> theFlags = new ArrayList<Flag>();
+	Flag theFlag;
 	//main method
 	public static void main(String[]args)
 	{
@@ -23,14 +34,53 @@ public class GameGui extends JFrame implements ActionListener {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		createFileMenu();
-		displayDonald();
-		displayMexican();
-		
+		//displayDonald();
+		//displayMexican();
+		initialiseGame(); 
+		start(); 
 		
 		
 	}
 
 	
+	public void run()
+	{
+		Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+		Graphics g = getGraphics();
+		
+		while(gameOn)
+		{
+			try
+			{
+				paint(g);
+				Thread.sleep(20);
+			}
+			catch(InterruptedException e)
+			{
+				break;
+			}
+		}
+	}
+
+	private void start()
+	{
+		if(gameThread == null)
+		{
+			gameThread = new Thread(this);
+			gameThread.start();
+		}
+		
+		
+	}
+
+
+	private void initialiseGame() {
+		
+		
+		
+		gameOn = true;
+		
+	}
 
 
 	private void createFileMenu() {
@@ -60,13 +110,13 @@ public class GameGui extends JFrame implements ActionListener {
 
 	}
 	
-	private void displayDonald()
+	/*private void displayDonald()
 	{
 		Container cPane = getContentPane();
 		cPane.setLayout(new FlowLayout());
 		JLabel donald = new JLabel();
-		ImageIcon donaldImage = new ImageIcon(new ImageIcon(("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg")).getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
-		donald.setIcon(donaldImage);
+		ImageIcon dt = new ImageIcon(new ImageIcon(("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg")).getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+		donald.setIcon(dt);
 		cPane.add(donald);
 		
 	}
@@ -79,7 +129,21 @@ public class GameGui extends JFrame implements ActionListener {
 		ImageIcon mexicanImage = new ImageIcon(new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Mexican.jpg").getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
 		mexican.setIcon(mexicanImage);
 		mcPane.add(mexican);
+	}*/
+	public void paint(Graphics g)
+	{
+		if (gRef==null)
+			{
+				gameImage = createImage(1200, 1000);
+				gRef = gameImage.getGraphics(); 
+			}
+		if (gRef==null || gameImage==null)
+		{
+			return;
+		}
 	}
+	
+	
 
 
 	public void actionPerformed(ActionEvent e) {
@@ -105,16 +169,6 @@ public class GameGui extends JFrame implements ActionListener {
 		
 	}
 	
-	public void keyPressed(KeyEvent e)
-	{
-		 int key = e.getKeyCode();
-		 
-		 
-		 if(key == KeyEvent.VK_LEFT)
-		 {
-			 moveX = -1;
-		 }
-
-	}
+	
 
 }

@@ -1,3 +1,8 @@
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
+
 
 public class Donald extends Character
 {
@@ -6,6 +11,7 @@ public class Donald extends Character
 	private int y;
 	private int moveX;
 	private int moveY;
+	private Image image;
 	
 	//no argument constructor
 	public Donald()
@@ -27,6 +33,13 @@ public class Donald extends Character
 		this.moveY = moveY;
 	}
 	
+	private void createDonald()
+	{
+		ImageIcon dt = new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg");
+		image = dt.getImage();
+		x = 40;
+		y = 40;
+	}
 	//mutators
 	public void setScore(int score)
 	{
@@ -75,5 +88,65 @@ public class Donald extends Character
 	public int getMoveY()
 	{
 		return moveY;
+	}
+	
+	public void move()
+	{
+		x += moveX;
+		y += moveY;
+	}
+	
+	public void keyPressed(KeyEvent e)
+	{
+		 int key = e.getKeyCode();
+		 
+		 
+		 if(key == KeyEvent.VK_LEFT)
+		 {
+			 moveX = -1;
+		 }
+		 
+		 if(key == KeyEvent.VK_RIGHT)
+		 {
+			 moveX = 1;
+		 }
+		 
+		 if(key == KeyEvent.VK_UP)
+		 {
+			 moveY = -1;
+		 }
+		 
+		 if(key == KeyEvent.VK_DOWN)
+		 {
+			 moveY = 1;
+		 }
+
+	}
+	
+	public void keyReleased(KeyEvent e)
+	{
+		int key = e.getKeyCode();
+		 
+		 
+		 if(key == KeyEvent.VK_LEFT)
+		 {
+			 moveX = 0;
+		 }
+		 
+		 if(key == KeyEvent.VK_RIGHT)
+		 {
+			 moveX = 0;
+		 }
+		 
+		 if(key == KeyEvent.VK_UP)
+		 {
+			 moveY = 0;
+		 }
+		 
+		 if(key == KeyEvent.VK_DOWN)
+		 {
+			 moveY = 0;
+		 }
+
 	}
 }
