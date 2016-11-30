@@ -109,11 +109,7 @@ public class GameGui extends JFrame implements ActionListener {
 	{
 		 int key = e.getKeyCode();
 		 
-		 
-		 if(key == KeyEvent.VK_LEFT)
-		 {
-			 moveX = -1;
-		 }
+		 //if()
 
 	}
 

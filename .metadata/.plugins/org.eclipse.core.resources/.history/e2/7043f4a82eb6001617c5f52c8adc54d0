@@ -25,27 +25,40 @@ public class Character
 		this.health = health;
 	}
 	
+	public int getHealth()
+	{
+		return health;
+	}
 	
 	public void setImage(Image image)
 	{
 		this.image = image;
 	}
 	
-	
-	public int getHealth()
-	{
-		return health;
-	}
-	
-	
 	public Image getImage()
 	{
 		return image;
 	}
 	
+	/*public Image donaldImage()
+	{
+		ImageIcon donald = new ImageIcon("Donald.png");
+		
+		return donaldImage;
+	}
 	
+	public Image mexicanImage()
+	{
+		ImageIcon mexican = new ImageIcon("Mexican.png");
+		return mexicanImage;
+	}
 	
-	
+	public Image flagImage()
+	{
+		ImageIcon flag = new ImageIcon("Flag.png");
+		
+		return flagImage;
+	}*/
 }
 
 

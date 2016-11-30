@@ -1,25 +1,31 @@
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
 
 
-public class TheWall extends JFrame implements ActionListener {
+public class GameGui extends JFrame implements ActionListener {
+
+	//main method
+	public static void main(String[]args)
+	{
+		GameGui frame = new GameGui();	
+		frame.setVisible(true);
+	}
 
 	
-
-	
-	public TheWall()
+	public GameGui()
 	{
 		setTitle("The Wall");
-		setSize(600,500);
-		setLocation(350,100);
+		setSize(1200,1000);
+		setLocation(150,0);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		createFileMenu();
+		displayDonald();
+		displayMexican();
 		
-
 		
 		
 	}
@@ -52,6 +58,27 @@ public class TheWall extends JFrame implements ActionListener {
 		
 		
 
+	}
+	
+	private void displayDonald()
+	{
+		Container cPane = getContentPane();
+		cPane.setLayout(new FlowLayout());
+		JLabel donald = new JLabel();
+		ImageIcon donaldImage = new ImageIcon(new ImageIcon(("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg")).getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+		donald.setIcon(donaldImage);
+		cPane.add(donald);
+		
+	}
+	
+	private void displayMexican()
+	{
+		Container mcPane = getContentPane();
+		mcPane.setLayout(new FlowLayout());
+		JLabel mexican = new JLabel();
+		ImageIcon mexicanImage = new ImageIcon(new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Mexican.jpg").getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+		mexican.setIcon(mexicanImage);
+		mcPane.add(mexican);
 	}
 
 

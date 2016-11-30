@@ -7,7 +7,9 @@ import java.awt.*;
 public class Character 
 {
 	private String name;
+	//private Image mexicanImage;
 	private Image image;
+	//private Image flagImage;
 	private int health;
 	
 	public void setName(String name)
@@ -25,27 +27,30 @@ public class Character
 		this.health = health;
 	}
 	
-	
-	public void setImage(Image image)
-	{
-		this.image = image;
-	}
-	
-	
 	public int getHealth()
 	{
 		return health;
 	}
 	
-	
-	public Image getImage()
+	/*public Image donaldImage()
 	{
-		return image;
+		ImageIcon donald = new ImageIcon("Donald.png");
+		
+		return donaldImage;
 	}
 	
+	public Image mexicanImage()
+	{
+		ImageIcon mexican = new ImageIcon("Mexican.png");
+		return mexicanImage;
+	}
 	
-	
-	
+	public Image flagImage()
+	{
+		ImageIcon flag = new ImageIcon("Flag.png");
+		
+		return flagImage;
+	}*/
 }
 
 

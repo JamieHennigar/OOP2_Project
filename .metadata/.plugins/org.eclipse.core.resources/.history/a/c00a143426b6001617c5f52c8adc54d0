@@ -1,25 +1,22 @@
-
 import java.awt.*;
+import java.awt.image.ImageObserver;
 
+import javax.swing.*;
 
 
 public class GameComponent 
-{	
-	// declare attributes
+{
 	private int topLeftXPosition;
 	private int topLeftYPosition;
 	private Image image;
 	
-	// multiple argument constructor
-	public GameComponent(int topLeftXPosition, int topLeftYPosition, Image image)
+	public GameComponent()
 	{
 		this.topLeftXPosition = topLeftXPosition;
 		this.topLeftYPosition = topLeftYPosition;
 		this.image = image;
 	}
 	
-	
-	//mutators
 	public void setTopLeftXPosition(int topLeftXPosition)
 	{
 		this.topLeftXPosition = topLeftXPosition;
@@ -35,8 +32,6 @@ public class GameComponent
 		this.image = image;
 	}
 	
-	
-	//accessors
 	public int getTopLeftXPosition()
 	{
 		return topLeftXPosition;
@@ -52,7 +47,7 @@ public class GameComponent
 		return image;
 	}
 	
-	/*public void draw(Graphics gRef)
+	public void draw(Graphics gRef)
 	{
 		Image donaldImage;
 		Image mexicanImage;
@@ -73,5 +68,5 @@ public class GameComponent
 		
 		flagImage.getHeaight();
 		flagImage.getWidth();*/
-	//}
+	}
 }

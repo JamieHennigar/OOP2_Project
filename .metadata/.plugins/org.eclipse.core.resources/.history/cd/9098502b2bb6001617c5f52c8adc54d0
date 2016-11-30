@@ -1,26 +1,41 @@
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
 
 
-public class TheWall extends JFrame implements ActionListener {
+public class GameGui extends JFrame implements ActionListener {
+
+	public static void main(String[]args)
+	{
+		GameGui frame = new GameGui();	
+		frame.setVisible(true);
+	}
 
 	
-
-	
-	public TheWall()
+	public GameGui()
 	{
 		setTitle("The Wall");
-		setSize(600,500);
-		setLocation(350,100);
+		setSize(1200,1000);
+		setLocation(150,0);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		createFileMenu();
 		
-
+		Container cPane = getContentPane();
+		cPane.setLayout(new FlowLayout());
+		JLabel donald = new JLabel();
+		ImageIcon donaldImage = new ImageIcon(new ImageIcon(("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Donald.jpg")).getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+		donald.setIcon(donaldImage);
+		cPane.add(donald);
+		//set the size and location for donald
 		
+		//create mexican image and set size and location
+		JLabel mexican = new JLabel();
+		ImageIcon mexicanImage = new ImageIcon(new ImageIcon("C:/Users/jamie_000/Documents/OOP2_Project/The Wall/src/Mexican.jpg").getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+		mexican.setIcon(mexicanImage);
+		cPane.add(mexican);
 		
 	}
 
@@ -31,7 +46,7 @@ public class TheWall extends JFrame implements ActionListener {
 		
 		JMenuItem item;
 		JMenu fileMenu;
-		JMenu PlayerMenu;
+	
 		
 		JMenuBar meh = new JMenuBar();
 		setJMenuBar(meh);
@@ -52,6 +67,17 @@ public class TheWall extends JFrame implements ActionListener {
 		
 		
 
+	}
+	
+	private void displayDonald()
+	{
+		
+		
+	}
+	
+	private void displayMexican()
+	{
+		
 	}
 
 
