@@ -18,7 +18,7 @@ public class Flag extends GameComponent
 		
 	}
 	
-	public void draw(Graphics gRef)
+	public void drawFlag(Graphics gRef)
 	{
 		
 	}

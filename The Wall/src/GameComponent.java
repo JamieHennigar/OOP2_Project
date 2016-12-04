@@ -1,5 +1,6 @@
 
 import java.awt.*;
+import java.awt.image.ImageObserver;
 
 
 
@@ -87,10 +88,10 @@ public class GameComponent
 	
 	public void draw(Graphics gRef)
 	{
+		ImageObserver a = null;
 		
-		
-		gRef.drawImage(image, topLeftXPosition , topLeftYPosition , image.getWidth(), image.getHeight(), 
-					   0, 0, image.getWidth(), image.getHeight(), null);
+		gRef.drawImage(image, topLeftXPosition , topLeftYPosition , image.getWidth(a), image.getHeight(a), 
+					   0, 0, image.getWidth(a) , image.getHeight(a), null);
 		
 		
 		
