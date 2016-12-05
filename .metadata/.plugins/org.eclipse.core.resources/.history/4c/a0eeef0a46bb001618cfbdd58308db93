@@ -13,18 +13,18 @@ import javax.swing.*;
 
 public class GameGui extends JFrame implements KeyListener,ActionListener {
 	
-	public int score = 0;
-	boolean gameOn = false;
-	Thread gameThread;
-	Image gameImage;
-	Graphics gRef;
+	 public int score = 0;
+	//boolean gameOn = false;
+	//Thread gameThread;
+	//Image gameImage;
+	//Graphics gRef;
 	
 	
 	Donald theDonald;
-	Mexican[][] theMexicans;
-	Wall theWall;
-	ArrayList<Flag> theFlags = new ArrayList<Flag>();
-	Flag theFlag;
+	//Mexican[][] theMexicans;
+	//Wall theWall;
+	//ArrayList<Flag> theFlags = new ArrayList<Flag>();
+	//Flag theFlag;
 	
 	//main method
 	public static void main(String[]args)
