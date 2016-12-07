@@ -56,7 +56,7 @@ public class Donald extends Character
 	public void move(int units)
 	{
 		
-		units =0;
+		//y += units;
 	}
 	
 	/*public void keyPressed(KeyEvent e)

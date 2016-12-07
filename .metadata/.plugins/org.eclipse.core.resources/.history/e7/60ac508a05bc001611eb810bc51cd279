@@ -223,10 +223,10 @@ public class GameGui extends JFrame implements KeyListener,ActionListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		
-		int key = e.getKeyCode();
+		//int key = e.getKeyCode();
 		int x = 0;
 		
-		if(e.getKeyCode() == KeyEvent.VK_SPACE)
+		if(e.getKeyCode() == KeyEvent.VK_A)
 		{
 			JOptionPane.showMessageDialog(null, "you have hit a mexican" + score);
 			score = x++;
@@ -234,32 +234,12 @@ public class GameGui extends JFrame implements KeyListener,ActionListener {
 			System.out.println(score);
 			
 		}
-		 if(key == KeyEvent.VK_UP)
-		 {
-			 theDonald.move(2);
-		 }
-		 
-		 if(key == KeyEvent.VK_DOWN)
-		 {
-			 theDonald.move(2);
-		 }
-		
 	}
 
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		int key = e.getKeyCode();
-		
-		if(key == KeyEvent.VK_UP)
-		 {
-			 theDonald.move(0);
-		 }
-		
-		if(key == KeyEvent.VK_DOWN)
-		 {
-			 theDonald.move(0);
-		 }
+		 
 	}
 
 
