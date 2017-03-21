@@ -2,7 +2,6 @@
 import java.awt.*;
 import java.awt.image.ImageObserver;
 
-
 /** A class called GameComponent which is the super class
  * of the classes in this project
  * 
@@ -11,7 +10,6 @@ import java.awt.image.ImageObserver;
  */
 public class GameComponent 
 {	
-	
 	// declare attributes
 	private int topLeftXPosition;
 	private int topLeftYPosition;

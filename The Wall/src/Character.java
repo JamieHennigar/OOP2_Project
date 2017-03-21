@@ -1,4 +1,4 @@
-import javax.swing.*;
+
 
 import java.awt.*;
 
@@ -30,10 +30,6 @@ public class Character extends GameComponent
 	{
 		return health;
 	}
-	
-	
-	
-	
 	
 	
 }
